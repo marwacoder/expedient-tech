@@ -72,7 +72,7 @@ const ResponsiveAppBar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <img width={200} height={40} src='/logos/logo.png' alt='logo2'/>
+              <img width={200} height={30} src='/logos/logo.png' alt='logo2'/>
             </IconButton>
            
             <Menu

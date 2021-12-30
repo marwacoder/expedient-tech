@@ -35,14 +35,14 @@ export default function SwipeableTemporaryDrawer(props: any) {
             onOpen={toggleDrawer('bottom', true)}
           >
                <Box
-               
+               style={{height: '87vh'}}
                bgcolor='primary.main'
       sx={{ width:  'auto' }}
       role="presentation"
       onClick={toggleDrawer('bottom', false)}
       onKeyDown={toggleDrawer('bottom', false)}
     >
-        <Box pt={5}>
+        <Box >
      {/* <img src='/logos/logo.png' alt='l' width={100} height={100}/> */}
      {pages.map((page) => (
                 <MenuItem  key={page} >
