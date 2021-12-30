@@ -19,7 +19,7 @@ export default function SwipeableTemporaryDrawer(props: any) {
         <React.Fragment>
 
           <SwipeableDrawer
-          
+          onClose={toggleDrawer()}
           disableBackdropTransition={true}
             anchor={'bottom'}
             open={state}
