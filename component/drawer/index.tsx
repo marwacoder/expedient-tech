@@ -29,7 +29,7 @@ export default function SwipeableTemporaryDrawer(props: any) {
         
         </div>
                <Box
-               style={{height: '100vh', backgroundImage: `url('/logos/biglogo.png')`}}
+               style={{height: '100vh'}}
                bgcolor='primary.main'
       sx={{ width:  'auto' }}
       role="presentation"
@@ -40,7 +40,7 @@ export default function SwipeableTemporaryDrawer(props: any) {
      {/* <img src='/logos/logo.png' alt='l' width={100} height={100}/> */}
      <Box mx={2} mt={2} display='flex' justifyContent='space-between' alignItems='center'>
        <Box>
-          <img width={35} height={30} src='/logos/logobig.png' alt='logo2'/>
+          <img width={35} height={30} src='/logos/logobig.png' alt='logo'/>
               <img width={150} style={{marginLeft: 5}} height={25} src='/logos/expedientTechs.png' alt='expedientTechs'/>
        </Box>
     
