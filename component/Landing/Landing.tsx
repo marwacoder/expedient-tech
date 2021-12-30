@@ -15,12 +15,9 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-  const [state, setState] = React.useState({
-    bottom: false
-  });
+  const [state, setState] = React.useState(false);
 
-  const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
+  const toggleDrawer =( open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
         event &&
@@ -31,7 +28,7 @@ const ResponsiveAppBar = () => {
         return;
       }
 
-      setState({ ...state, [anchor]: open });
+      setState(open);
     };
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -59,21 +56,17 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-           <img width={250} height={40} src='/logos/logo.png' alt='logo'/>
+            <img width={45} height={40} src='/logos/logobig.png' alt='logo2'/>
+              <img width={200} style={{marginLeft: 5}} height={35} src='/logos/expedientTechs.png' alt='expedientTechs'/>
+              
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <img width={200} height={30} src='/logos/logo.png' alt='logo2'/>
-            </IconButton>
+            
+              <img width={35} height={30} src='/logos/logobig.png' alt='logo2'/>
+              <img width={150} style={{marginLeft: 5}} height={25} src='/logos/expedientTechs.png' alt='expedientTechs'/>
+              
+           
            
             <Menu
              
@@ -138,7 +131,7 @@ const ResponsiveAppBar = () => {
           </Hidden>
           <Box sx={{ flexGrow: 0 }}>
           <Hidden mdUp>
-            <IconButton onClick={toggleDrawer('bottom', true)} sx={{ p: 0 }}>
+            <IconButton onClick={toggleDrawer( true)} sx={{ p: 0 }}>
                 <img alt="Remy Sharp" src="/logos/hamburger.png" />
               </IconButton>
 
