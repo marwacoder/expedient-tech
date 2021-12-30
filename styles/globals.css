@@ -19,3 +19,16 @@ a {
   font-family: "Poppins";
   src: url("/fonts/Poppins-Regular.ttf");
 }
+
+.background-mobile {
+  background-image: url('/logos/background.png');
+  background-repeat: no-repeat;
+  height: 100%;
+   width: 100%;
+   position: fixed;
+   top: 80%;
+   left: 80%;
+   /* bring your own prefixes */
+   transform: translate(-30%, -50%);
+  z-index: 1; 
+}

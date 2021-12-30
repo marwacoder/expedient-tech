@@ -56,14 +56,14 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            <img width={45} height={40} src='/logos/logobig.png' alt='logo2'/>
+            <img width={45} height={40} src='/logos/logobig.png' alt='logoa'/>
               <img width={200} style={{marginLeft: 5}} height={35} src='/logos/expedientTechs.png' alt='expedientTechs'/>
               
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             
-              <img width={35} height={30} src='/logos/logobig.png' alt='logo2'/>
+              <img width={35} height={30} src='/logos/logobig.png' alt='logob'/>
               <img width={150} style={{marginLeft: 5}} height={25} src='/logos/expedientTechs.png' alt='expedientTechs'/>
               
            

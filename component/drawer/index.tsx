@@ -25,6 +25,9 @@ export default function SwipeableTemporaryDrawer(props: any) {
             open={state}
             onOpen={toggleDrawer( true)}
           >
+             <div className='background-mobile'>
+        
+        </div>
                <Box
                style={{height: '100vh', backgroundImage: `url('/logos/biglogo.png')`}}
                bgcolor='primary.main'
@@ -32,6 +35,7 @@ export default function SwipeableTemporaryDrawer(props: any) {
       role="presentation"
      
     >
+     
         <Box >
      {/* <img src='/logos/logo.png' alt='l' width={100} height={100}/> */}
      <Box mx={2} mt={2} display='flex' justifyContent='space-between' alignItems='center'>
@@ -55,7 +59,7 @@ export default function SwipeableTemporaryDrawer(props: any) {
               ))}
   </Box>
     </Box>
-    <Box  pt={20}  display='flex' justifyContent='center'   >
+    <Box  pt={'40%'}  display='flex' justifyContent='center'   >
          
          <IconButton  >
           <LinkedInIcon sx={{ fontSize: 35 }} style={{color: 'white'}}/>
