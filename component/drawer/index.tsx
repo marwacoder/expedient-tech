@@ -1,14 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
 import {MenuItem, Typography, IconButton, LinkedInIcon, FacebookIcon, InstagramIcon} from '../mui'
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
@@ -31,41 +24,42 @@ export default function SwipeableTemporaryDrawer(props: any) {
 
   return (
     <div>
-      {([ 'bottom'] as const).map((anchor) => (
-        <React.Fragment key={anchor}>
+
+        <React.Fragment>
 
           <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
+          disableBackdropTransition={true}
+            anchor={'bottom'}
+            open={state['bottom']}
+            onClose={toggleDrawer('bottom', false)}
+            onOpen={toggleDrawer('bottom', true)}
           >
                <Box
                
                bgcolor='primary.main'
-      sx={{ width:  anchor === 'bottom' ? 'auto' : 250 , height: 'auto'}}
+      sx={{ width:  'auto' }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer('bottom', false)}
+      onKeyDown={toggleDrawer('bottom', false)}
     >
-        <Box>
+        <Box pt={5}>
      {/* <img src='/logos/logo.png' alt='l' width={100} height={100}/> */}
      {pages.map((page) => (
                 <MenuItem  key={page} >
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography color='white' textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
 
     </Box>
-    <Box display='flex'borderRadius={46} justifyContent='center' width={131} height={50} >
+    <Box pt={10} pb={10} display='flex' justifyContent='center'   >
          
-         <IconButton  sx={{ p: 0 }}>
+         <IconButton  >
           <LinkedInIcon style={{color: 'white'}}/>
          </IconButton>
-         <IconButton  sx={{ p: 0 }}>
+         <IconButton  >
           <InstagramIcon fontSize="medium" style={{color: 'white'}}/>
          </IconButton>
-         <IconButton  sx={{ p: 0 }}>
+         <IconButton  >
           <FacebookIcon  style={{color: 'white'}}/>
          </IconButton>
         
@@ -73,7 +67,7 @@ export default function SwipeableTemporaryDrawer(props: any) {
     </Box>
           </SwipeableDrawer>
         </React.Fragment>
-      ))}
+      
     </div>
   );
 }
