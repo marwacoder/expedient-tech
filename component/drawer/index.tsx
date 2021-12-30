@@ -40,7 +40,7 @@ export default function SwipeableTemporaryDrawer(props: any) {
               <img width={150} style={{marginLeft: 5}} height={25} src='/logos/expedientTechs.png' alt='expedientTechs'/>
        </Box>
     
-        <Box><IconButton  onClick={toggleDrawer(false)}> <CloseIcon fontSize={'70'} sx={{ fontSize: 30 }} style={{color: 'white'}}/></IconButton></Box>
+        <Box><IconButton  onClick={toggleDrawer(false)}> <CloseIcon  sx={{ fontSize: 30 }} style={{color: 'white'}}/></IconButton></Box>
      </Box>
      <Divider style={{backgroundColor: 'white'}}/>
      <Box ml={3} mt={3}>
