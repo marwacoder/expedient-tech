@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import Image from 'next/image'
 
 import {AppBar, Box, Toolbar, Hidden, IconButton,HomeIcon,
   Typography, Menu, InstagramIcon, FacebookIcon, LinkedInIcon, Container,Avatar, Button, MenuItem
@@ -7,7 +7,11 @@ import {AppBar, Box, Toolbar, Hidden, IconButton,HomeIcon,
 
 import SwipeableTemporaryDrawer from '../drawer';
 
-type Anchor =  'bottom';
+import Logo from '../../public/logos/logobig.png'
+import Hamburger from '../../public/logos/hamburger.png'
+import ExpedientTech from '../../public/logos/expedientTechs.png'
+import Home from '../../public/logos/home.png'
+
 
 const pages = ['About Us', 'Services', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -31,9 +35,7 @@ const ResponsiveAppBar = () => {
       setState(open);
     };
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
+  
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -56,16 +58,15 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            <img width={45} height={40} src='/logos/logobig.png' alt='logo'/>
-              <img width={200} style={{marginLeft: 5}} height={35} src='/logos/expedientTechs.png' alt='expedientTechs'/>
+            <Image  src={Logo} alt='logo'/>
+              <Image   src={ExpedientTech} alt='expedientTechs'/>
               
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             
-              <img width={35} height={30} src='/logos/logobig.png' alt='logo'/>
-              <img width={150} style={{marginLeft: 5}} height={25} src='/logos/expedientTechs.png' alt='expedientTechs'/>
-              
+          <Image  src={Logo} alt='logo'/>
+              <Image   src={ExpedientTech} alt='expedientTechs'/>
            
            
             <Menu
@@ -98,7 +99,7 @@ const ResponsiveAppBar = () => {
          
           <Box ml={5} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
              <IconButton onClick={handleOpenUserMenu}>
-               <HomeIcon style={{color: 'white'}}/>
+               <Image src={Home} alt='home'/>
               </IconButton>
             {pages.map((page) => (
               <Box mr={5}>
@@ -132,7 +133,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
           <Hidden mdUp>
             <IconButton onClick={toggleDrawer( true)} sx={{ p: 0 }}>
-                <img alt="Remy Sharp" src="/logos/hamburger.png" />
+                <Image alt="hamburger" src={Hamburger} />
               </IconButton>
 
             <SwipeableTemporaryDrawer state={state} toggleDrawer={toggleDrawer}/>
