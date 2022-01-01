@@ -1,10 +1,6 @@
 import * as React from 'react';
 import Image from 'next/image';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-<<<<<<< HEAD
-=======
-
->>>>>>> 074853f5d9aa212d25e470df19ba09f4a525cb9a
 
 
 import {
@@ -41,7 +37,6 @@ export default function SwipeableTemporaryDrawer(props: any) {
             sx={{ width: 'auto' }}
             role="presentation"
           >
-<<<<<<< HEAD
             <Box>
               {/* <img src='/logos/logo.png' alt='l' width={100} height={100}/> */}
               <Box
@@ -55,32 +50,6 @@ export default function SwipeableTemporaryDrawer(props: any) {
                   <Image src='/logos/logobig.png' width={'26.06px'} height={'25.89px'} alt="logo" />
                   <Image src='/logos/expedientTechs.png' width={'106.53px'} height={'19.97px'} alt="expedientTechs" />
                 </Box>
-=======
-             <div className='background-mobile'>
-        
-        </div>
-               <Box
-               style={{height: '100vh'}}
-               bgcolor='primary.main'
-      sx={{ width:  'auto' }}
-      role="presentation"
-     
-    >
-     
-        <Box >
-     
-     <Box mx={2} mt={2} display='flex' justifyContent='space-between' alignItems='center'>
-       <Box>
-       <Image  src='/logos/logobig.png' alt='logo'/>
-              <Image  src='/logos/expedientTechs.png'  alt='expedientTechs'/>
-       </Box>
-    
-        <Box><IconButton  onClick={toggleDrawer(false)}> <CloseIcon  sx={{ fontSize: 30 }} style={{color: 'white'}}/></IconButton></Box>
-     </Box>
-     <Divider style={{backgroundColor: 'white'}}/>
-     <Box ml={3} mt={3}>
-     {pages.map((page) => (
->>>>>>> 074853f5d9aa212d25e470df19ba09f4a525cb9a
 
                 <Box>
                   <IconButton onClick={toggleDrawer(false)}>
