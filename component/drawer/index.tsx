@@ -1,8 +1,7 @@
 import * as React from 'react';
 import Image from 'next/image'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import Logo from '../../public/logos/logobig.png'
-import ExpedientTech from '../../public/logos/expedientTechs.png'
+
 
 import {MenuItem, Box, Typography, Divider,CloseIcon, IconButton, LinkedInIcon, FacebookIcon, InstagramIcon} from '../mui'
 
@@ -39,11 +38,11 @@ export default function SwipeableTemporaryDrawer(props: any) {
     >
      
         <Box >
-     {/* <img src='/logos/logo.png' alt='l' width={100} height={100}/> */}
+     
      <Box mx={2} mt={2} display='flex' justifyContent='space-between' alignItems='center'>
        <Box>
-       <Image  src={Logo} alt='logo'/>
-              <Image   src={ExpedientTech} alt='expedientTechs'/>
+       <Image  src='/logos/logobig.png' alt='logo'/>
+              <Image  src='/logos/expedientTechs.png'  alt='expedientTechs'/>
        </Box>
     
         <Box><IconButton  onClick={toggleDrawer(false)}> <CloseIcon  sx={{ fontSize: 30 }} style={{color: 'white'}}/></IconButton></Box>
