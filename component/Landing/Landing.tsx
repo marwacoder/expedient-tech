@@ -8,10 +8,6 @@ import {AppBar, Box, Toolbar, Hidden, IconButton,HomeIcon,
 import SwipeableTemporaryDrawer from '../drawer';
 import CarouselComponent from '../carousel'
 
-import Logo from '../../public/logos/logobig.png'
-import Hamburger from '../../public/logos/hamburger.png'
-import ExpedientTech from '../../public/logos/expedientTechs.png'
-import Home from '../../public/logos/home.png'
 
 
 const pages = ['About Us', 'Services', 'Contact'];
@@ -51,7 +47,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <Box>
-    <AppBar position="static">
+    <AppBar position='fixed'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -60,15 +56,15 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            <Image  src={Logo} alt='logo'/>
-              <Image   src={ExpedientTech} alt='expedientTechs'/>
-              
+             <Image src='/logos/logobig.png' width={'43.05px'} height={'42.78px'} alt="logo" />
+                  <Image src='/logos/expedientTechs.png' width={'176px'} height={'33px'} alt="expedientTechs" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             
-          <Image  src={Logo} alt='logo'/>
-              <Image   src={ExpedientTech} alt='expedientTechs'/>
+          <Image src='/logos/logobig.png' width={'26.06px'} height={'25.89px'} alt="logo" />
+                  <Image src='/logos/expedientTechs.png' width={'106.53px'} height={'19.97px'} alt="expedientTechs" />
+                
            
            
             <Menu
@@ -101,18 +97,19 @@ const ResponsiveAppBar = () => {
          
           <Box ml={5} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
              <IconButton onClick={handleOpenUserMenu}>
-               <Image src={Home} alt='home'/>
+             <Image src="/logos/home.png" width={'25px'} height={'19.44px'} />
               </IconButton>
             {pages.map((page) => (
               <Box mr={5}>
-              <Button
+              <MenuItem
               
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
-              </Button>
+                <Typography fontWeight={500} fontSize='17px'>{page}</Typography>
+                
+              </MenuItem>
               </Box>
             ))}
           </Box>
@@ -135,7 +132,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
           <Hidden mdUp>
             <IconButton onClick={toggleDrawer( true)} sx={{ p: 0 }}>
-                <Image alt="hamburger" src={Hamburger} />
+                <Image src="/logos/hamburger.png" width={'28px'} height={'16px'} />
               </IconButton>
 
             <SwipeableTemporaryDrawer state={state} toggleDrawer={toggleDrawer}/>
@@ -168,9 +165,9 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-    <main>
+    <Box my={10}>
       <CarouselComponent/>
-    </main>
+    </Box>
     </Box>
   );
 };
