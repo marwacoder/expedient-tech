@@ -2,29 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
-import Group1 from '../../public/pictures/Group1.png'
-import Group2 from '../../public/pictures/Group2.png'
-import Group3 from '../../public/pictures/Group3.png'
 
 import {Box, Typography, Button} from '../mui'
 
-const carous = [
-    {title: 'Deploying software to Promote your business growth.',
-    sub: 'General Branding   Software Development   IT Consultants',
-    txtBtn: 'Contact us now',
-    img: Group1
-    },
-    {title: 'Creative Brand that Promote your business growth',
-    sub: 'General Branding   Software Development   IT Consultants',
-    txtBtn: 'Contact us now',
-    img: Group3
-    },
-    {title: 'Technical Consult that Promote your business growth',
-    sub: 'General Branding   Software Development   IT Consultants',
-    txtBtn: 'Contact us now',
-    img: Group2
-    }
-]
 
 export default function CarouselComponent():JSX.Element {
     return (
@@ -43,7 +23,7 @@ export default function CarouselComponent():JSX.Element {
                 
                </Box>
                <Box mt={2}>
-                  <Image src={Group1} alt='first'/> 
+                  <Image src='/pictures/Group1.png' alt='first'/> 
                </Box>
            </Box>
            <Box display='flex' justifyContent='center' alignContent='center'>
@@ -59,7 +39,7 @@ export default function CarouselComponent():JSX.Element {
                
               </Box>
               <Box mt={2}>
-                 <Image src={Group2} alt='second'/> 
+                 <Image src='/pictures/Group2.png'  alt='second'/> 
               </Box>
           </Box>
           <Box display='flex' justifyContent='center' alignContent='center'>
@@ -75,7 +55,7 @@ export default function CarouselComponent():JSX.Element {
                
               </Box>
               <Box mt={2}>
-                 <Image src={Group3} alt='second'/> 
+                 <Image src='/pictures/Group3.png' alt='second'/> 
               </Box>
           </Box>
            
