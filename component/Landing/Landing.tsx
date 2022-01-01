@@ -8,7 +8,10 @@ import {AppBar, Box, Toolbar, Hidden, IconButton,HomeIcon,
 import SwipeableTemporaryDrawer from '../drawer';
 import CarouselComponent from '../carousel'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 074853f5d9aa212d25e470df19ba09f4a525cb9a
 
 const pages = ['About Us', 'Services', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -56,15 +59,26 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
+<<<<<<< HEAD
              <Image src='/logos/logobig.png' width={'43.05px'} height={'42.78px'} alt="logo" />
                   <Image src='/logos/expedientTechs.png' width={'176px'} height={'33px'} alt="expedientTechs" />
+=======
+            <Image  src='/logos/logobig.png' alt='logo'/>
+              <Image  src='/logos/expedientTechs.png'  alt='expedientTechs'/>
+              
+>>>>>>> 074853f5d9aa212d25e470df19ba09f4a525cb9a
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             
+<<<<<<< HEAD
           <Image src='/logos/logobig.png' width={'26.06px'} height={'25.89px'} alt="logo" />
                   <Image src='/logos/expedientTechs.png' width={'106.53px'} height={'19.97px'} alt="expedientTechs" />
                 
+=======
+          <Image  src='/logos/logobig.png' alt='logo'/>
+              <Image   src='/logos/expedientTechs.png' alt='expedientTechs'/>
+>>>>>>> 074853f5d9aa212d25e470df19ba09f4a525cb9a
            
            
             <Menu
@@ -97,7 +111,11 @@ const ResponsiveAppBar = () => {
          
           <Box ml={5} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
              <IconButton onClick={handleOpenUserMenu}>
+<<<<<<< HEAD
              <Image src="/logos/home.png" width={'25px'} height={'19.44px'} />
+=======
+               <Image src='/logos/home.png' alt='home'/>
+>>>>>>> 074853f5d9aa212d25e470df19ba09f4a525cb9a
               </IconButton>
             {pages.map((page) => (
               <Box mr={5}>
@@ -132,7 +150,11 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
           <Hidden mdUp>
             <IconButton onClick={toggleDrawer( true)} sx={{ p: 0 }}>
+<<<<<<< HEAD
                 <Image src="/logos/hamburger.png" width={'28px'} height={'16px'} />
+=======
+                <Image alt="hamburger" src='/logos/hamburger.png' />
+>>>>>>> 074853f5d9aa212d25e470df19ba09f4a525cb9a
               </IconButton>
 
             <SwipeableTemporaryDrawer state={state} toggleDrawer={toggleDrawer}/>
