@@ -8,11 +8,6 @@ import {AppBar, Box, Toolbar, Hidden, IconButton,HomeIcon,
 import SwipeableTemporaryDrawer from '../drawer';
 import CarouselComponent from '../carousel'
 
-import Logo from '../../public/logos/logobig.png'
-import Hamburger from '../../public/logos/hamburger.png'
-import ExpedientTech from '../../public/logos/expedientTechs.png'
-import Home from '../../public/logos/home.png'
-
 
 const pages = ['About Us', 'Services', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -60,15 +55,15 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            <Image  src={Logo} alt='logo'/>
-              <Image   src={ExpedientTech} alt='expedientTechs'/>
+            <Image  src='/logos/logobig.png' alt='logo'/>
+              <Image  src='/logos/expedientTechs.png'  alt='expedientTechs'/>
               
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             
-          <Image  src={Logo} alt='logo'/>
-              <Image   src={ExpedientTech} alt='expedientTechs'/>
+          <Image  src='/logos/logobig.png' alt='logo'/>
+              <Image   src='/logos/expedientTechs.png' alt='expedientTechs'/>
            
            
             <Menu
@@ -101,7 +96,7 @@ const ResponsiveAppBar = () => {
          
           <Box ml={5} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
              <IconButton onClick={handleOpenUserMenu}>
-               <Image src={Home} alt='home'/>
+               <Image src='/logos/home.png' alt='home'/>
               </IconButton>
             {pages.map((page) => (
               <Box mr={5}>
@@ -135,7 +130,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
           <Hidden mdUp>
             <IconButton onClick={toggleDrawer( true)} sx={{ p: 0 }}>
-                <Image alt="hamburger" src={Hamburger} />
+                <Image alt="hamburger" src='/logos/hamburger.png' />
               </IconButton>
 
             <SwipeableTemporaryDrawer state={state} toggleDrawer={toggleDrawer}/>
