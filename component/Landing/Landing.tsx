@@ -6,6 +6,7 @@ import {AppBar, Box, Toolbar, Hidden, IconButton,HomeIcon,
 } from '../mui'
 
 import SwipeableTemporaryDrawer from '../drawer';
+import CarouselComponent from '../carousel'
 
 import Logo from '../../public/logos/logobig.png'
 import Hamburger from '../../public/logos/hamburger.png'
@@ -49,6 +50,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
+    <Box>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -166,6 +168,10 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+    <main>
+      <CarouselComponent/>
+    </main>
+    </Box>
   );
 };
 export default ResponsiveAppBar;
