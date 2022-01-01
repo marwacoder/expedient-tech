@@ -8,7 +8,6 @@ import {AppBar, Box, Toolbar, Hidden, IconButton,HomeIcon,
 import SwipeableTemporaryDrawer from '../drawer';
 import CarouselComponent from '../carousel'
 
-
 const pages = ['About Us', 'Services', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
