@@ -19,7 +19,7 @@ export default function CarouselComponent(): JSX.Element {
 
 
   return (
-    <Container maxWidth='md'>
+    <Container maxWidth='lg'>
       <Carousel
         
         infiniteLoop
@@ -156,7 +156,7 @@ export default function CarouselComponent(): JSX.Element {
           </Grid>
         </Grid>
       </Carousel>
-      <Box mt={'15%'}>
+      <Box mt={'5%'}>
         <Grid
           container
           spacing={2}
@@ -166,6 +166,7 @@ export default function CarouselComponent(): JSX.Element {
           <Grid item sm={12} xs={12} md={6}>
             <Box>
               <Typography
+              mb={2}
                 lineHeight={'54px'}
                 fontSize={xs ? '24px' : sm ? '26px': md ? '36px' : '40px'}
                 fontWeight="bold"
@@ -180,7 +181,7 @@ export default function CarouselComponent(): JSX.Element {
                 width={'413px'}
                 lineHeight={'23.85px'}
                 fontWeight={300}
-                fontSize={xs ? '12px' : sm ? '26px': md ? '15.9px' : '20px'}
+                fontSize={xs ? '14px' : sm ? '15px': md ? '15.9px' : '20px'}
               >
                 To deliver creative and strategic IT services targeted at
                 providing entire IT solutions to our clients in order to help
@@ -232,7 +233,7 @@ export default function CarouselComponent(): JSX.Element {
                     lineHeight={'23.85px'}
                     width="368px"
                     height={'72px'}
-                    fontSize={xs ? '12px' : sm ? '26px': md ? '15.9px' : '20px'}
+                    fontSize={xs ? '14px' : sm ? '15px': md ? '15.9px' : '20px'}
                   >
                     We are a diversified group of minds that are dedicated to
                     resolving all of your technological business challenges.
@@ -254,7 +255,7 @@ export default function CarouselComponent(): JSX.Element {
                 >
                   <Image
                     src="/logos/v2.png"
-                    alt="v1"
+                    alt="v2"
                     width={'44px'}
                     height={'35px'}
                   />
@@ -282,7 +283,7 @@ export default function CarouselComponent(): JSX.Element {
                     lineHeight={'23.85px'}
                     width="368px"
                     height={'72px'}
-                    fontSize={xs ? '12px' : sm ? '26px': md ? '15.9px' : '20px'}
+                    fontSize={xs ? '14px' : sm ? '15px': md ? '15.9px' : '20px'}
                   >
                     Our service offerings range from consultancy to software
                     development / customization and General Branding.

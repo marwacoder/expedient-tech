@@ -8,6 +8,7 @@ import {
 
 import SwipeableTemporaryDrawer from '../drawer';
 import CarouselComponent from '../carousel'
+import Services from '../services';
 
 
 const pages = ['About Us', 'Services', 'Contact'];
@@ -163,7 +164,9 @@ const ResponsiveAppBar = () => {
       </AppBar>
       <Box my={10}>
         <CarouselComponent />
-      </Box>
+       <Services/>
+      </Box> 
+      
     </Box>
   );
 };

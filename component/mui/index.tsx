@@ -1,5 +1,5 @@
 import {AppBar, Box, Toolbar, IconButton, Typography,Hidden, useMediaQuery,
-    Menu, Container, Avatar, Button, Tooltip, MenuItem, Divider,Grid,
+    Menu, Container, Avatar, Button, Tooltip, MenuItem, Divider,Grid, Paper,
 } from '@mui/material'
 
 import {Menu as MenuIcon, Facebook as FacebookIcon, Home as HomeIcon,
@@ -9,5 +9,5 @@ import {Menu as MenuIcon, Facebook as FacebookIcon, Home as HomeIcon,
 
 export { AppBar, Box, Toolbar, IconButton, Typography,Hidden,Grid,useMediaQuery,
     Menu, Container, Avatar, Button, Tooltip, MenuItem,Divider,CloseIcon,
-    MenuIcon, FacebookIcon, InstagramIcon, LinkedInIcon, HomeIcon
+    MenuIcon, FacebookIcon, InstagramIcon, LinkedInIcon, HomeIcon, Paper
 }
