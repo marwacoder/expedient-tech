@@ -8,7 +8,8 @@ let theme = createTheme({
         fontFamily: 'Poppins',
         button: {
             textTransform: "none"
-          }
+          },
+          
       },
       components: {
         MuiCssBaseline: {

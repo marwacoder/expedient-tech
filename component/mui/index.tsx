@@ -1,4 +1,4 @@
-import {AppBar, Box, Toolbar, IconButton, Typography,Hidden,
+import {AppBar, Box, Toolbar, IconButton, Typography,Hidden, useMediaQuery,
     Menu, Container, Avatar, Button, Tooltip, MenuItem, Divider,Grid,
 } from '@mui/material'
 
@@ -7,7 +7,7 @@ import {Menu as MenuIcon, Facebook as FacebookIcon, Home as HomeIcon,
 } from '@mui/icons-material'
 
 
-export { AppBar, Box, Toolbar, IconButton, Typography,Hidden,Grid,
+export { AppBar, Box, Toolbar, IconButton, Typography,Hidden,Grid,useMediaQuery,
     Menu, Container, Avatar, Button, Tooltip, MenuItem,Divider,CloseIcon,
     MenuIcon, FacebookIcon, InstagramIcon, LinkedInIcon, HomeIcon
 }

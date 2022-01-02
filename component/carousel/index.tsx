@@ -1,13 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTheme } from '@mui/material/styles';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
 
-import { Box, Typography, Button, Grid, Container } from '../mui';
+import { Box, Typography, Button, Grid, Container, useMediaQuery } from '../mui';
 
 
 export default function CarouselComponent(): JSX.Element {
+
+
+  const theme = useTheme();
+  const md = useMediaQuery(theme.breakpoints.only('md'));
+  const xs = useMediaQuery(theme.breakpoints.only('xs'));
+  const sm = useMediaQuery(theme.breakpoints.only('sm'));
+
+
+
   return (
     <Container maxWidth='md'>
       <Carousel
@@ -17,28 +27,28 @@ export default function CarouselComponent(): JSX.Element {
         autoPlay
         showThumbs={false}
         showStatus={false}
-        dynamicHeight={true}
+        dynamicHeight={false}
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <Box textAlign="left" mt={3}>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 Deploying software to
               </Typography>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 Promote your business
               </Typography>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 growth.
@@ -55,7 +65,9 @@ export default function CarouselComponent(): JSX.Element {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Box mt={2}>
-              <Image src='/pictures/Group1.png' width={500} height={500} alt="first" />
+              <Image src='/pictures/Group1.png' 
+              width={xs ? 200 : sm ? 300: md ? 400 : 500} height={xs ? 200 : sm ? 300: md ? 400 : 500}
+               alt="first" />
             </Box>
           </Grid>
         </Grid>
@@ -64,21 +76,21 @@ export default function CarouselComponent(): JSX.Element {
             <Box textAlign="left" mt={3}>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 Creative Brand that
               </Typography>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 Promote your business
               </Typography>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 growth.
@@ -95,7 +107,9 @@ export default function CarouselComponent(): JSX.Element {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Box mt={2}>
-              <Image src='/pictures/Group2.png' width={500} height={500} alt="second" />
+              <Image src='/pictures/Group2.png' 
+              width={xs ? 200 : sm ? 300: md ? 400 : 500} height={xs ? 200 : sm ? 300: md ? 400 : 500}
+               alt="second" />
             </Box>
           </Grid>
         </Grid>
@@ -104,21 +118,21 @@ export default function CarouselComponent(): JSX.Element {
             <Box textAlign="left" mt={3}>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 Technical Consult that
               </Typography>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 Promote your business
               </Typography>
               <Typography
                 color="primary.main"
-                fontSize={'30px'}
+                fontSize={xs ? '18px' : sm ? '22px': md ? '30px' : '34px'}
                 fontWeight="bold"
               >
                 growth.
@@ -135,7 +149,9 @@ export default function CarouselComponent(): JSX.Element {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Box mt={2}>
-              <Image src='/pictures/Group1.png' width={500} height={500} alt="second" />
+              <Image src='/pictures/Group3.png' 
+              width={xs ? 200 : sm ? 300: md ? 400 : 500} height={xs ? 200 : sm ? 300: md ? 400 : 500}
+               alt="third" />
             </Box>
           </Grid>
         </Grid>
@@ -151,7 +167,7 @@ export default function CarouselComponent(): JSX.Element {
             <Box>
               <Typography
                 lineHeight={'54px'}
-                fontSize={'36px'}
+                fontSize={xs ? '24px' : sm ? '26px': md ? '36px' : '40px'}
                 fontWeight="bold"
               >
                 Our{' '}
@@ -160,12 +176,11 @@ export default function CarouselComponent(): JSX.Element {
                 </Box>{' '}
               </Typography>
               <Typography
-              
                 height={'120px'}
                 width={'413px'}
                 lineHeight={'23.85px'}
                 fontWeight={300}
-                fontSize={15.9}
+                fontSize={xs ? '12px' : sm ? '26px': md ? '15.9px' : '20px'}
               >
                 To deliver creative and strategic IT services targeted at
                 providing entire IT solutions to our clients in order to help
@@ -206,7 +221,7 @@ export default function CarouselComponent(): JSX.Element {
                       width="149px"
                       height="45px"
                       fontWeight={600}
-                      fontSize={'24px'}
+                      fontSize={xs ? '18px' : sm ? '18px': md ? '20px' : '24px'}
                     >
                       Why us
                     </Typography>
@@ -217,7 +232,7 @@ export default function CarouselComponent(): JSX.Element {
                     lineHeight={'23.85px'}
                     width="368px"
                     height={'72px'}
-                    fontSize={'15.9px'}
+                    fontSize={xs ? '12px' : sm ? '26px': md ? '15.9px' : '20px'}
                   >
                     We are a diversified group of minds that are dedicated to
                     resolving all of your technological business challenges.
@@ -256,7 +271,7 @@ export default function CarouselComponent(): JSX.Element {
                       width="149px"
                       height="45px"
                       fontWeight={600}
-                      fontSize={'24px'}
+                      fontSize={xs ? '18px' : sm ? '18px': md ? '20px' : '24px'}
                     >
                       What we do
                     </Typography>
@@ -267,7 +282,7 @@ export default function CarouselComponent(): JSX.Element {
                     lineHeight={'23.85px'}
                     width="368px"
                     height={'72px'}
-                    fontSize={'15.9px'}
+                    fontSize={xs ? '12px' : sm ? '26px': md ? '15.9px' : '20px'}
                   >
                     Our service offerings range from consultancy to software
                     development / customization and General Branding.
