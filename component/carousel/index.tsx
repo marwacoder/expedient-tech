@@ -160,6 +160,7 @@ export default function CarouselComponent(): JSX.Element {
                 </Box>{' '}
               </Typography>
               <Typography
+              
                 height={'120px'}
                 width={'413px'}
                 lineHeight={'23.85px'}

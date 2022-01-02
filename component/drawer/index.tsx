@@ -46,10 +46,10 @@ export default function SwipeableTemporaryDrawer(props: any) {
                 justifyContent="space-between"
                 alignItems="center"
               >
-                <Box>
-                  <Image src='/logos/logobig.png' width={'26.06px'} height={'25.89px'} alt="logo" />
+                <MenuItem>
+                  <Image src='/logos/logo.png' width={'26.06px'} height={'25.89px'} alt="logo" />
                   <Image src='/logos/expedientTechs.png' width={'106.53px'} height={'19.97px'} alt="expedientTechs" />
-                </Box>
+                </MenuItem>
 
                 <Box>
                   <IconButton onClick={toggleDrawer(false)}>
