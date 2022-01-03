@@ -17,7 +17,12 @@ import {
 
 const pages = ['Home', 'About Us', 'Services', 'Contact'];
 
-export default function SwipeableTemporaryDrawer(props: any) {
+interface Idrawer{
+  state: boolean,
+  toggleDrawer: boolean | any
+}
+
+ const SwipeableTemporaryDrawer: React.FC <Idrawer> =(props: Idrawer)=> {
   const { state, toggleDrawer } = props;
 
   return (
@@ -38,7 +43,6 @@ export default function SwipeableTemporaryDrawer(props: any) {
             role="presentation"
           >
             <Box>
-              {/* <img src='/logos/logo.png' alt='l' width={100} height={100}/> */}
               <Box
                 mx={2}
                 mt={2}
@@ -98,3 +102,4 @@ export default function SwipeableTemporaryDrawer(props: any) {
     </div>
   );
 }
+export default SwipeableTemporaryDrawer;

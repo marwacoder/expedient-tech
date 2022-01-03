@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 
 a {
@@ -14,30 +14,26 @@ a {
   box-sizing: border-box;
 }
 
-
 @font-face {
-  font-family: "Poppins";
-  src: url("/fonts/Poppins-Regular.ttf");
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf');
 }
 
 .background-mobile {
   background-image: url('/logos/background.png');
   background-repeat: no-repeat;
   height: 100%;
-   width: 100%;
-   position: fixed;
-   top: 80%;
-   left: 80%;
-   /* bring your own prefixes */
-   transform: translate(-30%, -50%);
-  z-index: 1; 
-}
-
-.center {
-  position: absolute;
-  top: 10%;
-  left: 50%;
- 
+  width: 100%;
+  position: fixed;
+  top: 80%;
+  left: 80%;
   /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  transform: translate(-30%, -50%);
+  z-index: 1;
+}
+.MuiGrid-item {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
