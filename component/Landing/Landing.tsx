@@ -3,20 +3,20 @@ import React from 'react';
 import App_Bar from '../appbar';
 import Carousel from '../carousel';
 import Services from '../services';
-import { Container, Box } from '../mui';
+import {Box } from '../mui';
 
 const Landing: React.FC = () => {
   return (
-    <Box >
+    <Box>
       <Box mt={10}>
         <App_Bar />
       </Box>
 
-      <Box >
+      <Box>
         <Carousel />
       </Box>
 
-      <Box mt={2} bgcolor={'#0D4F6A14'} height={'auto'} alignItems={'center'} >
+      <Box mt={2} bgcolor={'#0D4F6A14'} height={'auto'} alignItems={'center'}>
         <Services />
       </Box>
     </Box>

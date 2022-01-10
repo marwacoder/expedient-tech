@@ -2,7 +2,6 @@ import * as React from 'react';
 import Image from 'next/image';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 
-
 import {
   MenuItem,
   Box,
@@ -17,12 +16,12 @@ import {
 
 const pages = ['Home', 'About Us', 'Services', 'Contact'];
 
-interface Idrawer{
-  state: boolean,
-  toggleDrawer: boolean | any
+interface Idrawer {
+  state: boolean;
+  toggleDrawer: boolean | any;
 }
 
- const SwipeableTemporaryDrawer: React.FC <Idrawer> =(props: Idrawer)=> {
+const SwipeableTemporaryDrawer: React.FC<Idrawer> = (props: Idrawer) => {
   const { state, toggleDrawer } = props;
 
   return (
@@ -51,8 +50,20 @@ interface Idrawer{
                 alignItems="center"
               >
                 <MenuItem>
-                  <Image src='/logos/logo.png' width={'26.06px'} height={'25.89px'} alt="logo" />
-                  <Image src='/logos/expedientTechs.png' width={'106.53px'} height={'19.97px'} alt="expedientTechs" />
+                <Image
+                src="/logos/logo.png"
+                width={30}
+                height={30}
+                alt="logo"
+              />
+              <Box ml={.5}>
+              <Image
+                src="/logos/expedientTechs.png"
+                width={100}
+                height={30}
+                alt="expedientTechs"
+              />
+              </Box>
                 </MenuItem>
 
                 <Box>
@@ -69,7 +80,12 @@ interface Idrawer{
               <Box ml={3} mt={3}>
                 {pages.map((page) => (
                   <MenuItem key={page}>
-                    <Typography fontWeight={500} fontSize={20} textAlign='center' color="white" >
+                    <Typography
+                      fontWeight={500}
+                      fontSize={20}
+                      textAlign="center"
+                      color="white"
+                    >
                       {page}
                     </Typography>
                   </MenuItem>
@@ -101,5 +117,5 @@ interface Idrawer{
       </React.Fragment>
     </div>
   );
-}
+};
 export default SwipeableTemporaryDrawer;
